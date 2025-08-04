@@ -1,1 +1,69 @@
-<h1>hello!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Vanishing Middle Class</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>The Vanishing Middle Class</h1>
+        <p>An interactive story about income inequality in the U.S. from 1970-2020.</p>
+    </header>
+
+    <main id="container">
+        <div id="narrative">
+            <div id="intro" class="step">
+                <p>For 50 years, a key part of the American dream has been slowly disappearing. The middle class, which was once the strong foundation of our economy, is getting smaller.</p>
+                <p>Scroll down to see the data that shows this change.</p>
+            </div>
+            <div id="scene1" class="step" data-step="1">
+                <h2>A Growing Gap</h2>
+                <p>Let's look at how Americans were divided by income in <strong>1970</strong> compared to <strong>2020</strong>.</p>
+                <p>In 1970, most people were in the middle class. By 2020, this had changed a lot. More people moved into the lower and upper income groups, while the middle class got smaller. This created a "barbell" shape - with more people at the top and bottom, and fewer in the middle.</p>
+                <p><em>Hover over the chart to see the exact numbers.</em></p>
+            </div>
+
+            <div id="scene3" class="step" data-step="2">
+                <h2>Different Experiences by Race</h2>
+                <p>The overall numbers hide big differences between racial groups. Use the dropdown below to see how income levels changed for different communities over time.</p>
+                <p>You'll see clear gaps that have lasted for 50 years. For example, Black and Hispanic people have stayed mostly in the lower income group throughout this entire period.</p>
+                <div class="interaction-box">
+                    <label for="race-selector"><strong>Choose a Race:</strong></label>
+                    <select id="race-selector">
+                        <option value="All">All Races</option>
+                        <option value="White">White</option>
+                        <option value="Black">Black</option>
+                        <option value="Hispanic">Hispanic</option>
+                        <option value="Asian">Asian</option>
+                    </select>
+                </div>
+            </div>
+            <div id="scene4" class="step" data-step="3">
+                <h2>Wages vs. Costs: A Losing Battle</h2>
+                <p>A main reason the middle class is shrinking is that wages haven't kept up with the cost of living. While average family income has grown, the cost of basic needs like housing, healthcare, and education has gone up much faster.</p>
+                <p>This chart shows how average income grew compared to the cost of living. The space between the lines shows how much harder it has become for families to make ends meet.</p>
+            </div>
+
+                         
+            <div id="outro" class="step">
+                <h2>Conclusion</h2>
+                <p>The data tells a clear story: the American middle class is no longer the dominant economic force it once was. The combination of slow wage growth, soaring costs, and persistent inequalities has created a more fragile and polarized society.</p>
+                <p>Understanding these trends is the first step toward building a more equitable future.</p>
+            </div>
+        </div>
+
+        <div id="vis">
+            <svg id="chart"></svg>
+        </div>
+    </main>
+
+    <!-- Tooltip element -->
+    <div id="tooltip" class="tooltip"></div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
